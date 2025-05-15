@@ -1,9 +1,9 @@
 ---
 import ClientLogo from "../atoms/ClientLogo.astro";
-const { LogoName1, LogoName2, LogoName3, LogoName4, LogoName5, LogoName6, LogoName7 } = Astro.props;
+const { LogoName1, LogoName2, LogoName3, LogoName4, LogoName5, LogoName6, LogoName7, LogoName8 } = Astro.props;
 ---
 
-<article class="grid grid-cols-7 gap-10">
+<article class="flex gap-10">
   <ClientLogo LogoName={LogoName1} />
   <ClientLogo LogoName={LogoName2} />
   <ClientLogo LogoName={LogoName3} />
@@ -11,4 +11,5 @@ const { LogoName1, LogoName2, LogoName3, LogoName4, LogoName5, LogoName6, LogoNa
   <ClientLogo LogoName={LogoName5} />
   <ClientLogo LogoName={LogoName6} />
   <ClientLogo LogoName={LogoName7} />
+  <ClientLogo LogoName={LogoName8} />
 </article>
