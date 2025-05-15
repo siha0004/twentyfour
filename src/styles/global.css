@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  /************************** PRIMITIVES *****************************/
+
+  /* Fonts */
+  --font-*: initial;
+  --font-sans: "Poppins", system-ui, sans-serif;
+
+  /* Colors */
+
   --color-*: initial;
   --color-licorice-10: #69695d;
   --color-licorice-25: #505045;
