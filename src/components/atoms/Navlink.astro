@@ -1,0 +1,12 @@
+---
+const { href = "#", target = "_self", variant = "MainPage" } = Astro.props;
+
+const linkStyling = "rounded-full";
+
+const variantClasses = {
+  MainPage: "text-licorice-90 hover:text-licorice-10 active:text-licorice-90 active:underlinde-raspberry-50",
+  SubPage: "",
+};
+---
+
+<a href={href} class="" target={target} class:list={[linkStyling, variantClasses[variant]]}><slot /></a>
