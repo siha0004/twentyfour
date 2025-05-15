@@ -1,0 +1,19 @@
+---
+const { href = "#", target = "_self", variant = "ButtonPrimary", size = "base" } = Astro.props;
+
+const linkStyling = "rounded-full";
+
+const variantClasses = {
+  ButtonPrimary: "text-cream-10 bg-raspberry-50 hover:bg-raspberry-65 active:bg-raspberry-80",
+  ButtonSecondary: "text-licorice-90 bg-cream-20 border-cream-60 border-1 hover:bg-cream-10 active:bg-cream-35",
+  LinkPrimary: "underline text-licorice-90 hover:text-licorice-10 visited:text-licorice-10",
+};
+
+const sizeClasses = {
+  base: "px-5 py-2",
+  large: "px-8 py-3",
+  small: "",
+};
+---
+
+<a href={href} class="" target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></a>
