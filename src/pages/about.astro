@@ -1,11 +1,11 @@
 ---
 import MainLayouts from "../layouts/MainLayouts.astro";
 import Link from "../components/atoms/Link.astro";
-import NavLink from "../components/atoms/NavLink.astro";
 import "../styles/global.css";
 import Navlink from "../components/atoms/Navlink.astro";
 import Button from "../components/atoms/Button.astro";
 import Hero from "../components/organisms/Hero.astro";
+import Footer from "../components/organisms/Footer.astro";
 ---
 
 <MainLayouts>
@@ -13,8 +13,8 @@ import Hero from "../components/organisms/Hero.astro";
   <Hero variant="default" title="Hello" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis." />
   <section>
     <article>
-      <NavLink href="" variant="MainPage">Klik her</NavLink>
-      <NavLink href="" variant="SubPage">Klik her</NavLink>
+      <Navlink href="" variant="MainPage">Klik her</Navlink>
+      <Navlink href="" variant="SubPage">Klik her</Navlink>
       <Navlink href="" variant="SubPage" ikon="SubPage">Klik her</Navlink>
       <Navlink href="" variant="MainPage">Klik her</Navlink>
       <Link href="" variant="ButtonPrimary" size="large" ikon="ButtonPrimary">Klik her!</Link>
