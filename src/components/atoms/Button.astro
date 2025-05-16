@@ -1,0 +1,19 @@
+---
+const { variant = "primary", size = "large" } = Astro.props;
+
+const buttonStyling = "text-body-base";
+
+const variantClasses = {
+  primary: "text-button-primary-text bg-button-primary-background hover:bg-button-primary-background-hover active:bg-button-primary-background-pressed focus:outline-offset-4",
+  secondary: "text-button-secondary-text bg-button-secondary-background border-button-secondary-border border-1 hover:bg-button-secondary-background-hover active:bg-button-secondary-background-pressed focus:outline-offset-4",
+};
+
+const sizeClasses = {
+  base: "px-5 py-2",
+  large: "px-8 py-3",
+};
+---
+
+<div>
+  <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+</div>

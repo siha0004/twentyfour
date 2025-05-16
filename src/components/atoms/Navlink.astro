@@ -1,0 +1,15 @@
+---
+const { href = "#", target = "_self", variant = "MainPage", icon = "" } = Astro.props;
+
+const linkStyling = "rounded-full text-body-base";
+
+const variantClasses = {
+  MainPage: "text-link-text hover:text-link-text-hover active:underline-offset-8 decoration-border-accent visited:text-link-text-visited focus:outline-offset-4",
+  SubPage: "text-link-text hover:text-link-text-hover visited:text-link-text-visited focus:outline-offset-4",
+};
+---
+
+<a href={href} class="inline-flex items-center group" target={target} class:list={[linkStyling, variantClasses[variant]]}
+  ><slot />
+  {icon == "SubPage" && <div class="pl-4 hidden group-hover:block transition-opacity duration-200">Hello</div>}</a
+>
