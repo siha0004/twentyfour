@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import Navlink from "../atoms/Navlink.astro";
-import Toggle from "../atoms/Toggle.astro";
+import Button from "../atoms/Button.astro";
 ---
 
 <header class="flex items-center justify-between bg-background-glass px-[max(1rem,_50%_-_var(--content-width)_/_2)]">
@@ -10,14 +10,14 @@ import Toggle from "../atoms/Toggle.astro";
       <li>
         <a href="/" class="font-bold">Twentyfour</a>
       </li>
-      <a href="/">Cases</a>
-      <a href="/">Services</a>
-      <a href="/">Blog</a>
-      <a href="/">Om os</a>
+      <Navlink href="/cases" variant="MainPage">Cases</Navlink>
+      <Navlink href="/services" variant="MainPage">Services</Navlink>
+      <Navlink href="/blog" variant="MainPage">Blog</Navlink>
+      <Navlink href="/about" variant="MainPage">Omos</Navlink>
     </ul>
   </nav>
   <div class="flex gap-4">
-    <p class="bg-brand-raspberry">Kontakt os</p>
+    <Button size="base">Kontakt os</Button>
 
     <div class="relative inline-block group">
       <select class="appearance-none px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-text-primary focus:rounded-small">
