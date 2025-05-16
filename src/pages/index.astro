@@ -1,10 +1,24 @@
 ---
+import CardCases from "../components/molecules/CardCases.astro";
 import CardServices from "../components/molecules/CardServices.astro";
 import MainLayouts from "../layouts/MainLayouts.astro";
 import "../styles/global.css";
+
+import cases from "../data/cases.json";
+
+console.log("tester", cases);
 ---
 
 <MainLayouts>
   <h1 class="heading-display">Sif Bygger - Digitalt bureau</h1>
   <CardServices>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque illo repudiandae iusto esse obcaecati perferendis enim sunt quos hic? Excepturi, veniam sint! Dignissimos, maxime. Quod provident voluptatem ipsam inventore enim? </CardServices>
+  <section class="py-32">
+    <ul class="grid grid-cols-12 gap-5">
+      {
+        cases.map((oneCase) => {
+          return <CardCases data={oneCase} size="medium" />;
+        })
+      }
+    </ul>
+  </section>
 </MainLayouts>
