@@ -1,0 +1,23 @@
+---
+import ClientLogo from "../atoms/ClientLogo.astro";
+const { LogoName1, LogoName2, LogoName3, LogoName4, LogoName5, LogoName6, LogoName7, LogoName8, LogoName9 } = Astro.props;
+
+const { variant = "primary" } = Astro.props;
+
+const variantClasses = {
+  primary: "-left-0",
+  secondary: "-left-28",
+};
+---
+
+<article class="relative flex gap-10 full-bleed" class:list={[variantClasses[variant]]}>
+  <ClientLogo LogoName={LogoName1} />
+  <ClientLogo LogoName={LogoName2} />
+  <ClientLogo LogoName={LogoName3} />
+  <ClientLogo LogoName={LogoName4} />
+  <ClientLogo LogoName={LogoName5} />
+  <ClientLogo LogoName={LogoName6} />
+  <ClientLogo LogoName={LogoName7} />
+  <ClientLogo LogoName={LogoName8} />
+  <ClientLogo LogoName={LogoName9} />
+</article>

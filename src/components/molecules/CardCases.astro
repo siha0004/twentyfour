@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+
+import img from "../assets/about/stairs.webp";
+const { data, variant = "image", size = "small" } = Astro.props;
+
+const articleStyle = "grid content-start relative";
+
+const variantClass = {
+  image: "",
+  video: "",
+};
+
+const sizeClass = {
+  small: "col-span-3",
+  medium: "col-span-4",
+  large: "col-span-5",
+};
+---
+
+<li class:list={[articleStyle, sizeClass[size]]}>
+  <article>
+    <!-- <Image src={img} alt="Hejsa" /> -->
+    <header class="grid grid-cols-1">
+      <div class="bg-brand-raspberry aspect-square col-start-1 row-start-1 col-span-1"></div>
+      <div class="col-start-1 row-start-1 backdrop-blur-sm"></div>
+      <div class="bg-brand-lime aspect-video col-start-1 self-center row-start-1 mx-[5%]"></div>
+    </header>
+    <footer class="grid gap-1 mt-4">
+      <h3 class="text-heading-small">
+        <a href={`/${data.link}`} class="after:content-[''] after:absolute after:inset-0"> {data.company}</a>
+      </h3>
+      <ul class="flex gap-2 text-body-tiny">
+        {
+          data.services.map((service) => {
+            return <li class="capitalize">{service}</li>;
+          })
+        }
+      </ul>
+    </footer>
+  </article>
+</li>
