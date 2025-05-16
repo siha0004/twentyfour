@@ -1,12 +1,13 @@
 ---
-import CardCases from "../components/molecules/CardCases.astro";
-import CardServices from "../components/molecules/CardServices.astro";
 import MainLayouts from "../layouts/MainLayouts.astro";
+
+import CardCases from "../components/molecules/CardCases.astro";
+import CardProcess from "../components/molecules/CardProcess.astro";
+import CardServices from "../components/molecules/CardServices.astro";
 import "../styles/global.css";
 
 import cases from "../data/cases.json";
-
-console.log("tester", cases);
+import process from "../data/process.json";
 ---
 
 <MainLayouts>
@@ -17,6 +18,15 @@ console.log("tester", cases);
       {
         cases.map((oneCase) => {
           return <CardCases data={oneCase} size="medium" />;
+        })
+      }
+    </ul>
+  </section>
+  <section class="">
+    <ul class="grid grid-cols-12 gap-5">
+      {
+        process.map((step) => {
+          return <CardProcess data={step} />;
         })
       }
     </ul>
