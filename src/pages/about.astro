@@ -3,6 +3,7 @@ import MainLayouts from "../layouts/MainLayouts.astro";
 import Link from "../components/atoms/Link.astro";
 import NavLink from "../components/atoms/NavLink.astro";
 import "../styles/global.css";
+import Navlink from "../components/atoms/Navlink.astro";
 ---
 
 <MainLayouts>
@@ -10,6 +11,8 @@ import "../styles/global.css";
     <h1 class="heading-display">Trine tester side - About</h1>
     <NavLink href="" variant="MainPage">Klik her</NavLink>
     <NavLink href="" variant="SubPage">Klik her</NavLink>
+    <Navlink href="" variant="SubPage" icon="SubPage">Klik her</Navlink>
+    <Navlink href="" variant="MainPage">Klik her</Navlink>
     <Link href="" variant="ButtonPrimary" size="large">Klik her!</Link>
     <Link href="" variant="ButtonPrimary" size="base">Klik her!</Link>
     <Link href="" variant="ButtonSecondary" size="large">Klik her!</Link>

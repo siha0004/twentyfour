@@ -9,7 +9,7 @@ const variantClasses = {
 };
 ---
 
-<a href={href} class="" target={target} class:list={[linkStyling, variantClasses[variant]]}
+<a href={href} class="inline-flex items-center group" target={target} class:list={[linkStyling, variantClasses[variant]]}
   ><slot />
-  {icon == "SubPage" && <div class="pl-4">Hello</div>}</a
+  {icon == "SubPage" && <div class="pl-4 hidden group-hover:block transition-opacity duration-200">Hello</div>}</a
 >
