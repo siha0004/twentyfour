@@ -4,6 +4,7 @@ import Link from "../components/atoms/Link.astro";
 import NavLink from "../components/atoms/NavLink.astro";
 import "../styles/global.css";
 import Navlink from "../components/atoms/Navlink.astro";
+import Button from "../components/atoms/Button.astro";
 ---
 
 <MainLayouts>
@@ -11,13 +12,17 @@ import Navlink from "../components/atoms/Navlink.astro";
     <h1 class="heading-display">Trine tester side - About</h1>
     <NavLink href="" variant="MainPage">Klik her</NavLink>
     <NavLink href="" variant="SubPage">Klik her</NavLink>
-    <Navlink href="" variant="SubPage" icon="SubPage">Klik her</Navlink>
+    <Navlink href="" variant="SubPage" ikon="SubPage">Klik her</Navlink>
     <Navlink href="" variant="MainPage">Klik her</Navlink>
-    <Link href="" variant="ButtonPrimary" size="large">Klik her!</Link>
-    <Link href="" variant="ButtonPrimary" size="base">Klik her!</Link>
-    <Link href="" variant="ButtonSecondary" size="large">Klik her!</Link>
-    <Link href="" variant="ButtonSecondary" size="base">Klik her!</Link>
+    <Link href="" variant="ButtonPrimary" size="large" ikon="ButtonPrimary">Klik her!</Link>
+    <Link href="" variant="ButtonPrimary" size="base" ikon="ButtonPrimary">Klik her!</Link>
+    <Link href="" variant="ButtonSecondary" size="large" ikon="ButtonSecondary">Klik her!</Link>
+    <Link href="" variant="ButtonSecondary" size="base" ikon="ButtonSecondary">Klik her!</Link>
     <Link href="" variant="LinkPrimary" size="large">Dette er et link</Link>
+    <Button variant="primary" size="base" color="primaryColor">hello</Button>
+    <Button variant="primary" size="large" color="primaryColor">hello</Button>
+    <Button variant="secondary" size="base" color="secondaryColor">Hello</Button>
+    <Button variant="secondary" size="large" color="secondaryColor">Hello</Button>
   </article>
   <!-- <article class="grid gap-10">
     <ClientLogoRow variant="primary" LogoName1="bornholm" LogoName2="koncerthuset" LogoName3="orsted" LogoName4="vestas" LogoName5="hofor" LogoName6="koncerthuset" LogoName7="orsted" LogoName8="vestas" LogoName9="hofor" />
