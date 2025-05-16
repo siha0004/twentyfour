@@ -1,0 +1,24 @@
+---
+import Link from "../atoms/Link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="px-[max(1rem,_50%_-_var(--content-width)_/_2)]">
+  <section>
+    <h1 class="text-heading-xlarge text-text-primary pb-16">Skal vi tage en snak <br /> om dit næste projekt?</h1>
+    <h2 class="text-heading-small text-text-primary pb-8">+45 42 41 61 60</h2>
+    <h2 class="text-heading-small text-text-primary">info@twentyfour.dk</h2>
+  </section>
+
+  <section class="flex flex-row items-center justify-between">
+    <article>
+      <Icon name="butterfly" class="text-heading-medium" />
+      <p>CVR. nr. 33757883</p>
+      <p>Center Blvd. 5, indgang 7, 2300 København S</p>
+    </article>
+    <article>
+      <Link href="https://tailwindcss.com/docs/theme#theme-variable-namespaces" variant="LinkPrimary" target="_blank">Cookiepolitik</Link>
+      <Link href="" variant="LinkPrimary" target="_blank">Linkedin</Link>
+    </article>
+  </section>
+</footer>
