@@ -1,5 +1,5 @@
 ---
-const { href = "#", target = "_self", variant = "MainPage" } = Astro.props;
+const { href = "#", target = "_self", variant = "MainPage", icon = "" } = Astro.props;
 
 const linkStyling = "rounded-full text-body-base";
 
@@ -9,4 +9,7 @@ const variantClasses = {
 };
 ---
 
-<a href={href} class="" target={target} class:list={[linkStyling, variantClasses[variant]]}><slot /></a>
+<a href={href} class="" target={target} class:list={[linkStyling, variantClasses[variant]]}
+  ><slot />
+  {icon == "SubPage" && <div class="pl-4">Hello</div>}</a
+>
