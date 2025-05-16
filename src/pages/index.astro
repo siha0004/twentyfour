@@ -2,12 +2,11 @@
 import MainLayouts from "../layouts/MainLayouts.astro";
 
 import CardCases from "../components/molecules/CardCases.astro";
-import CardProcess from "../components/molecules/CardProcess.astro";
 import CardServices from "../components/molecules/CardServices.astro";
 import "../styles/global.css";
 
 import cases from "../data/cases.json";
-import process from "../data/process.json";
+import ScrollingContainer from "../components/organisms/ScrollingContainer.astro";
 ---
 
 <MainLayouts>
@@ -22,13 +21,7 @@ import process from "../data/process.json";
       }
     </ul>
   </section>
-  <section class="">
-    <ul class="grid grid-cols-12 gap-5">
-      {
-        process.map((step) => {
-          return <CardProcess data={step} />;
-        })
-      }
-    </ul>
+  <section class="full-bleed py-32">
+    <ScrollingContainer />
   </section>
 </MainLayouts>
