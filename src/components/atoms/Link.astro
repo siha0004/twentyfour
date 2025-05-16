@@ -4,15 +4,14 @@ const { href = "#", target = "_self", variant = "ButtonPrimary", size = "base" }
 const linkStyling = "rounded-full text-body-base";
 
 const variantClasses = {
-  ButtonPrimary: " text-cream-10 bg-raspberry-50 hover:bg-raspberry-65 active:bg-raspberry-80 focus:outline-offset-4",
-  ButtonSecondary: "text-licorice-90 bg-cream-20 border-cream-60 border-1 hover:bg-cream-10 active:bg-cream-35 focus:outline-offset-4",
-  LinkPrimary: "underline text-licorice-90 hover:text-licorice-10 active:text-licorice-10 focus:outline-offset-4",
+  ButtonPrimary: "text-button-primary-text bg-button-primary-background hover:bg-button-primary-background-hover active:bg-button-primary-background-pressed focus:outline-offset-4",
+  ButtonSecondary: "text-button-secondary-text bg-button-secondary-background border-button-secondary-border border-1 hover:bg-button-secondary-background-hover active:bg-button-secondary-background-pressed focus:outline-offset-4",
+  LinkPrimary: "underline text-link-text hover:text-link-text-hover visited:text-link-text-visited focus:outline-offset-4",
 };
 
 const sizeClasses = {
   base: "px-5 py-2",
   large: "px-8 py-3",
-  small: "",
 };
 ---
 
