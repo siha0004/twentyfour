@@ -2,7 +2,7 @@
 const { type, name, label } = Astro.props;
 ---
 
-<div class="grid bg-background-secondary border-border-primary border-b-2 relative mx-auto my-11">
-  <input type={type} name={name} id={name} required class="peer w-full text-[1.25em] bg-transparent border-0 border-b-2 focus:outline-none placeholder-transparent" />
-  <label for={name} class="absolute left-0 -top-8 text-[1.25em] transition-all peer-focus:-top-14 peer-focus:text-sm peer-placeholder-shown:top-0 peer-placeholder-shown:text-[1.25em]">{label}</label>
+<div class="grid relative mt-2 px-4 border-b-2 border-border-primary">
+  <input type={type} name={name} id={name} required class="peer w-full h-[54px] bg-transparent focus:outline-none placeholder-transparent" />
+  <label for={name} class="absolute px-4 left-0 top-2 transition-all peer-focus:-top-0 peer-focus:text-body-tiny peer-focus:text-text-secondary peer-placeholder-shown:top-0">{label}</label>
 </div>
