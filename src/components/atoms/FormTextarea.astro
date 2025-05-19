@@ -1,0 +1,8 @@
+---
+const { name, label } = Astro.props;
+---
+
+<div class="grid p-4">
+  <label for={name}>{label}</label>
+  <textarea name={name} id={name}></textarea>
+</div>

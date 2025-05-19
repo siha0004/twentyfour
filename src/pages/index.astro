@@ -7,6 +7,7 @@ import "../styles/global.css";
 
 import cases from "../data/cases.json";
 import ScrollingContainer from "../components/organisms/ScrollingContainer.astro";
+import ContactMessageform from "../components/organisms/ContactMessageform.astro";
 ---
 
 <MainLayouts>
@@ -23,5 +24,8 @@ import ScrollingContainer from "../components/organisms/ScrollingContainer.astro
   </section>
   <section class="full-bleed py-32">
     <ScrollingContainer />
+  </section>
+  <section class="py-32">
+    <ContactMessageform />
   </section>
 </MainLayouts>
