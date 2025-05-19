@@ -1,23 +1,15 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { variant = "vertical" } = Astro.props;
+const { data, text } = Astro.props;
 
-// const variantClasses = {
-//   horizontal: "flex justify-between self-center",
-//   vertical: "flex-col justify-between self-center",
-// };
-
-// const sizeIcon = {
-//     small: "",
-//     big: ""
-// }
+console.log("services data:", data);
 ---
 
-<article class="bg-background-secondary p-8 rounded-small grid gap-16 max-w-2xl">
-  <header class="flex justify-between self-center">
-    <h3 class="text-heading-small">Design</h3>
-    <Icon name="butterfly" class="text-heading-medium" />
+<article class="bg-background-secondary p-8 rounded-small flex flex-col @container">
+  <header class="flex flex-col gap-16 @xs:flex-row @xs:justify-between @xs:mb-6">
+    <Icon name="butterfly" class="text-heading-xlarge @xs:text-heading-medium @xs:order-2" />
+    <h3 class="text-heading-small mb-4">Design</h3>
   </header>
-  <slot />
+  <p class="">{text}</p>
 </article>
