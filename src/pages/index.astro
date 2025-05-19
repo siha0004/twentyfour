@@ -13,10 +13,10 @@ import ScrollingContainer from "../components/organisms/ScrollingContainer.astro
   <h1 class="heading-display">Sif Bygger - Digitalt bureau</h1>
   <CardServices>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque illo repudiandae iusto esse obcaecati perferendis enim sunt quos hic? Excepturi, veniam sint! Dignissimos, maxime. Quod provident voluptatem ipsam inventore enim? </CardServices>
   <section class="py-32">
-    <ul class="grid grid-cols-12 gap-5">
+    <ul class="grid grid-cols-[3fr_5fr_4fr] gap-5">
       {
         cases.map((oneCase) => {
-          return <CardCases data={oneCase} size="medium" />;
+          return <CardCases data={oneCase} variant={oneCase.thumbnail} />;
         })
       }
     </ul>
