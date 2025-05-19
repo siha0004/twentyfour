@@ -3,9 +3,12 @@ import FormInput from "../atoms/FormInput.astro";
 import FormTextarea from "../atoms/FormTextarea.astro";
 ---
 
-<form action="">
+<form action="" class="max-w-xl bg-background-primary rounded-large">
+  <div class="p-4 flex items-center gap-5 border-b-2 border-border-primary">
+    <p>Til:</p>
+    <p class="bg-background-secondary rounded-full px-3 py-1 flex items-center gap-2 before:content-[' '] before:block before:w-3.5 before:h-3.5 before:bg-lime-60 before:rounded-full">Twentyfour</p>
+  </div>
   <FormInput type="text" name="name" label="Name" />
-
   <FormInput type="email" name="email" label="E-mail" />
   <FormTextarea name="message" label="Skriv noget UX her" />
   <button type="submit">Send</button>
