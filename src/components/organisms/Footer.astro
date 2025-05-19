@@ -3,14 +3,14 @@ import Link from "../atoms/Link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<footer class="grid grid-cols-12 grid-rows-4 auto-cols-auto auto-rows-max px-[max(1rem,_50%_-_var(--content-width)_/_2)] relative">
-  <header class="col-start-1 col-span-12 row-start-1 row-span-3 pb-24 px-28 pt-28 z-10">
+<footer class="grid grid-cols-12 grid-rows-5 auto-cols-auto auto-rows-auto px-[max(1rem,_50%_-_var(--content-width)_/_2)] relative">
+  <header class="col-start-1 col-span-12 row-start-1 row-span-4 pb-24 px-28 pt-28 z-10">
     <h1 class="text-heading-xlarge text-text-primary pb-16">Skal vi tage en snak <br /> om dit næste projekt?</h1>
     <h2 class="text-heading-small text-text-primary pb-8">+45 42 41 61 60</h2>
     <h2 class="text-heading-small text-text-primary">info@twentyfour.dk</h2>
   </header>
 
-  <section class="col-start-1 col-span-12 row-start-4 md:flex md:flex-row md:items-center md:justify-between px-28 pb-28 z-10">
+  <section class="col-start-1 col-span-12 row-start-5 row-span-1 md:flex md:flex-row md:items-center md:justify-between px-28 pb-28 z-10">
     <article class="pb-6 md:pb-0 gap-4">
       <Icon name="butterfly" class="text-text-primary" />
       <p class="text-text-secondary">CVR. nr. 33757883</p>
@@ -22,8 +22,8 @@ import { Icon } from "astro-icon/components";
     </article>
   </section>
 
-  <div class="col-start-4 row-start-1"><Icon name="fan" class="w-graphic-medium h-graphic-medium" /></div>
-  <div class="col-start-1 row-start-3"><Icon name="flower" class="w-graphic-medium h-graphic-medium" /></div>
-  <div class="col-start-11 row-start-2"><Icon name="butterfly" class="w-graphic-small h-graphic-small" /></div>
-  <div class="col-start-11 row-start-3"><Icon name="square" class="w-graphic-large h-graphic-large" /></div>
+  <div class="col-start-4 col-span-1 row-start-1 row-span-1 absolute bottom-20"><Icon name="fan" class="w-graphic-medium h-graphic-medium" /></div>
+  <div class="col-start-1 row-start-4 row-span-2 content-center absolute top-6 left-[-3vw]"><Icon name="flower" class="w-graphic-medium h-graphic-medium" /></div>
+  <div class="col-start-10 col-span-1 row-start-3 content-center"><Icon name="butterfly" class="w-graphic-small h-graphic-small" /></div>
+  <div class="col-start-11 row-start-4 row-span-2"><Icon name="square" class="w-graphic-large h-graphic-large" /></div>
 </footer>
