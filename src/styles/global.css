@@ -198,6 +198,13 @@
   }
 }
 
+/* Custom cursor */
+@layer utilities {
+  .customcursor {
+    cursor: url("/CustomCursorCase.svg"), pointer;
+  }
+}
+
 /* @layer utilities {
   .flow-space {
     > * + * {
