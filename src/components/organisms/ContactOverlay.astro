@@ -4,9 +4,17 @@ import ContactMessageform from "./ContactMessageform.astro";
 import Button from "../atoms/Button.astro";
 ---
 
-<!-- <div popover id="contact_popover"> -->
-<div class="grid grid-cols-[2fr_1fr_auto] gap-5 items-start">
-  <ContactInformation />
-  <ContactMessageform />
-  <Button variant="secondary" color="secondary" />
+<div id="contact_popover" class="fixed grid place-items-center inset-0 backdrop:bg-licorice-75/50 backdrop:backdrop-blur-xs bg-transparent">
+  <div class="backdrop:bg-transparent grid grid-cols-[2fr_1fr_auto] gap-5 items-start">
+    <ContactInformation />
+    <ContactMessageform />
+    <Button variant="secondary" color="secondary" />
+  </div>
 </div>
+<!-- <div popover id="contact_popover" class="fixed hidden open:grid open:place-items-center inset-0 backdrop:bg-licorice-75/50 backdrop:backdrop-blur-xs bg-transparent">
+  <div class="backdrop:bg-transparent grid grid-cols-[2fr_1fr_auto] gap-5 items-start">
+    <ContactInformation />
+    <ContactMessageform />
+    <Button variant="secondary" color="secondary" />
+  </div>
+</div> -->
