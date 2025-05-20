@@ -8,6 +8,7 @@ import "../styles/global.css";
 import cases from "../data/cases.json";
 import ScrollingContainer from "../components/organisms/ScrollingContainer.astro";
 import ContactMessageform from "../components/organisms/ContactMessageform.astro";
+import ContactOverlay from "../components/organisms/ContactOverlay.astro";
 ---
 
 <MainLayouts>
@@ -26,6 +27,6 @@ import ContactMessageform from "../components/organisms/ContactMessageform.astro
     <ScrollingContainer />
   </section>
   <section class="py-32 full-bleed bg-cream-35">
-    <ContactMessageform />
+    <ContactOverlay />
   </section>
 </MainLayouts>
