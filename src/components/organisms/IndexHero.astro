@@ -1,10 +1,28 @@
 ---
+import Link from "../atoms/Link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<section>
-  <article>
-    <h1><span>Digitalt</span> <span>Bureau</span></h1>
-    <p><span><Icon name="butterfly" role="img" aria-label="Twentyfour" /></span><span>har fokus på løsninger,</span><span>der passer til dig</span></p>
+<section class="grid grid-cols-12 gap-x-6 relative">
+  <!-- <article class="grid grid-cols-[subgrid] col-start-1 lg:col-span-9 row-start-3 row-span-2">
+    <h1 class="heading-display"><span class="col-start-1 col-span-6 row-start-1">Digitalt</span> <span class="col-start-4 col-span-6 row-start-2">Bureau</span></h1>
+    <p class="text-body-base"><span><Icon name="butterfly" role="img" aria-label="Twentyfour" /></span><span>har fokus på løsninger,</span><span>der passer til dig</span></p>
+  </article> -->
+  <article class="grid grid-cols-[subgrid] grid-rows-[subgrid] col-start-1 lg:col-span-9 row-start-3 row-span-2 relative z-10">
+    <h1 class="contents heading-display">
+      <span class="col-start-1 col-span-6 row-start-1">Digitalt</span>
+      <span class="col-start-4 col-span-6 row-start-2">Bureau</span>
+    </h1>
+    <p class="text-body-base col-start-7 row-start-1 flex gap-2 items-center">
+      <span><Icon name="butterfly" role="img" aria-label="Twentyfour" /></span>
+      <span>har fokus på løsninger,</span>
+      <span>der passer til dig</span>
+    </p>
   </article>
+
+  <div class="col-start-1 row-start-1 lg:col-span-2"><Icon name="ring" class="w-graphic-medium h-graphic-medium" /></div>
+  <div class="col-start-10 row-start-1 place-content-end"><Icon name="flower" class="w-graphic-small h-graphic-small" /></div>
+  <div class="col-start-11 col-span-2 row-start-2"><Icon name="butterfly" class="w-graphic-large h-graphic-large" /></div>
+  <div class="lg:col-start-2 lg:col-span-2 lg:row-start-4 lg:row-span-2 absolute z-0"><Icon name="square" class="w-graphic-medium h-graphic-medium" /></div>
+  <div class="lg:col-start-11 col-span-2 lg:row-start-6"><Link href="" variant="ButtonPrimary" target="_blank">Kontakt os</Link></div>
 </section>
