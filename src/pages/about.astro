@@ -1,0 +1,37 @@
+---
+import MainLayouts from "../layouts/MainLayouts.astro";
+import Link from "../components/atoms/Link.astro";
+import "../styles/global.css";
+import Navlink from "../components/atoms/Navlink.astro";
+import Button from "../components/atoms/Button.astro";
+import Hero from "../components/organisms/Hero.astro";
+import AboutGallery from "../components/organisms/AboutGallery.astro";
+import SectionCases from "../components/organisms/SectionCases.astro";
+import SectionCases2 from "../components/organisms/SectionCases2.astro";
+import ClientLogoWrapper from "../components/organisms/ClientLogoWrapper.astro";
+---
+
+<MainLayouts>
+  <Hero title="Hello" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis." />
+  <Hero variant="default" title="Hello" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis." />
+  <section class="">
+    <article>
+      <Navlink href="" variant="MainPage">Klik her</Navlink>
+      <Navlink href="" variant="SubPage">Klik her</Navlink>
+      <Navlink href="" variant="SubPage" ikon="SubPage">Klik her</Navlink>
+      <Navlink href="" variant="MainPage">Klik her</Navlink>
+      <Link href="" variant="ButtonPrimary" size="large" ikon="ButtonPrimary">Klik her!</Link>
+      <Link href="" variant="ButtonPrimary" size="base" ikon="ButtonPrimary">Klik her!</Link>
+      <Link href="" variant="ButtonSecondary" size="large" ikon="ButtonSecondary">Klik her!</Link>
+      <Link href="" variant="ButtonSecondary" size="base" ikon="ButtonSecondary">Klik her!</Link>
+      <Link href="" variant="LinkPrimary" size="large">Dette er et link</Link>
+      <Button variant="primary" size="base" color="primaryColor">hello</Button>
+      <Button variant="primary" size="large" color="primaryColor">hello</Button>
+      <Button variant="secondary" size="base" color="secondaryColor">Hello</Button>
+      <Button variant="secondary" size="large" color="secondaryColor">Hello</Button>
+    </article>
+    <SectionCases />
+    <SectionCases2 />
+  </section>
+  <section><section class="full-bleed overflow-hidden w-[200vw] relative left-[-50vw]"><ClientLogoWrapper /></section></section>
+</MainLayouts>
