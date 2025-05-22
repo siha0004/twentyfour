@@ -9,12 +9,15 @@ import "../styles/global.css";
 import cases from "../data/cases.json";
 import services from "../data/services.json";
 import ScrollingContainer from "../components/organisms/ScrollingContainer.astro";
+import Navlink from "../components/atoms/Navlink.astro";
 
 console.log(services);
 ---
 
 <MainLayouts>
   <h1 class="heading-display">Sif Bygger - Digitalt bureau</h1>
+  <div class="max-w-64"></div>
+  <Navlink variant="sub">Subpage</Navlink>
   <section class="py-32 grid grid-cols-[4fr_8fr]">
     <div>
       <h2 class="heading-tagline">Tagline</h2>

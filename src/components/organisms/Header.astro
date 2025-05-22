@@ -4,11 +4,11 @@ import Navlink from "../atoms/Navlink.astro";
 import Button from "../atoms/Button.astro";
 ---
 
-<header class="flex items-center justify-between bg-background-glass backdrop-blur-xs py-4 px-[max(1rem,_50%_-_var(--content-width)_/_2)]">
+<header class="fixed w-full flex items-center justify-between bg-background-glass backdrop-blur-sm border-b-[1px] border-b-border-primary py-4 px-[max(1rem,_50%_-_var(--content-width)_/_2)] z-20">
   <nav>
     <ul class="flex items-center gap-8">
       <li>
-        <a href="/" class="font-bold">Twentyfour</a>
+        <a href="/" class="text-body-xlarge"><Icon name="logo" /></a>
       </li>
       <Navlink href="/cases" variant="MainPage">Cases</Navlink>
       <Navlink href="/services" variant="MainPage">Services</Navlink>
