@@ -82,12 +82,14 @@
   --text-heading-medium: clamp(1.5rem, 1.2473rem + 0.8602vw, 2rem);
   --text-heading-large: clamp(1.75rem, 1.1183rem + 2.1505vw, 3rem);
   --text-heading-xlarge: clamp(4rem, 2.9892rem + 3.4409vw, 6rem);
+  --text-heading-huge: clamp(3.75rem, -0.7352rem + 15.2688vw, 12.625rem);
 
-  --text-heading-xsmall--line-height: calc(var(--text-body-xsmall) * 110%);
-  --text-heading-small--line-height: calc(var(--text-body-small) * 110%);
-  --text-heading-medium--line-height: calc(var(--text-body-medium) * 110%);
-  --text-heading-large--line-height: calc(var(--text-body-large) * 110%);
-  --text-heading-xlarge--line-height: calc(var(--text-body-xlarge) * 110%);
+  --text-heading-xsmall--line-height: calc(var(--text-heading-xsmall) * 110%);
+  --text-heading-small--line-height: calc(var(--text-heading-small) * 110%);
+  --text-heading-medium--line-height: calc(var(--text-heading-medium) * 110%);
+  --text-heading-large--line-height: calc(var(--text-heading-large) * 110%);
+  --text-heading-xlarge--line-height: calc(var(--text-heading-xlarge) * 110%);
+  --text-heading-huge--line-height: calc(var(--text-heading-huge) * 110%);
 
   /* Grafikker */
   /* Clamp generator https://utopia.fyi/clamp/calculator?a=390,1728,32—48 */
@@ -146,7 +148,7 @@
 /* Text styles */
 @layer components {
   .heading-display {
-    @apply text-heading-xlarge font-normal;
+    @apply text-heading-huge font-normal;
   }
   .heading-xlarge {
     @apply text-heading-xlarge font-bold;
