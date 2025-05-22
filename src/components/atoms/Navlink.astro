@@ -10,7 +10,7 @@ const variantClasses = {
 };
 ---
 
-<a href={href} class="inline-flex items-center group gap-4" target={target} class:list={[linkStyling, variantClasses[variant]]}
+<a href={href} class="inline-flex items-center group gap-4 capitalize" target={target} class:list={[linkStyling, variantClasses[variant]]}
   ><slot />
   {
     variant === "sub" && (

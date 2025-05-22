@@ -2,18 +2,19 @@
 import { Icon } from "astro-icon/components";
 import Navlink from "../atoms/Navlink.astro";
 import Button from "../atoms/Button.astro";
+import NavlinkDropdown from "../molecules/NavlinkDropdown.astro";
 ---
 
-<header class="fixed w-full flex items-center justify-between bg-background-glass backdrop-blur-sm border-b-[1px] border-b-border-primary py-4 px-[max(1rem,_50%_-_var(--content-width)_/_2)] z-20">
+<header class="fixed w-full flex items-center justify-between bg-background-glass backdrop-blur-sm border-b border-b-border-primary py-4 px-[max(1rem,_50%_-_var(--content-width)_/_2)] z-20">
   <nav>
     <ul class="flex items-center gap-8">
       <li>
         <a href="/" class="text-body-xlarge"><Icon name="logo" /></a>
       </li>
       <Navlink href="/cases" variant="MainPage">Cases</Navlink>
-      <Navlink href="/services" variant="MainPage">Services</Navlink>
+      <NavlinkDropdown label="Service" variant="services" />
       <Navlink href="/blog" variant="MainPage">Blog</Navlink>
-      <Navlink href="/about" variant="MainPage">Omos</Navlink>
+      <NavlinkDropdown label="Om os" variant="about" />
     </ul>
   </nav>
   <div class="flex gap-4">
