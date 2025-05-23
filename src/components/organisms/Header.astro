@@ -3,45 +3,66 @@ import { Icon } from "astro-icon/components";
 import Navlink from "../atoms/Navlink.astro";
 import Button from "../atoms/Button.astro";
 import NavlinkDropdown from "../molecules/NavlinkDropdown.astro";
+import NavMobile from "../molecules/NavMobile.astro";
 ---
 
-<header class="fixed w-full flex items-center justify-between bg-background-glass backdrop-blur-sm border-b border-b-border-primary py-4 px-[max(1rem,_50%_-_var(--content-width)_/_2)] z-20">
-  <nav>
-    <ul class="flex items-center gap-8">
-      <li>
-        <a href="/" class="text-body-xlarge"><Icon name="logo" /></a>
-      </li>
+<!-- <header class="fixed w-full flex items-center justify-between bg-background-glass backdrop-blur-sm border-b border-b-border-primary py-4 px-[max(1rem,_50%_-_var(--content-width)_/_2)] z-20"> -->
+<header class="fixed w-full flex items-center justify-between bg-background-glass backdrop-blur-sm border-b border-b-border-primary py-4 px-[max(1rem,_50%_-_var(--content-width)_/_2)] z-30">
+  <nav class="flex gap-4 items-center">
+    <a href="/" class="text-body-xlarge flex items-center"><Icon name="wordmark" class="text-body-xlarge hidden sm:block" /><Icon name="logomark" class="text-heading-large" /></a>
+    <ul class="hidden md:flex gap-6 md:items-center">
       <Navlink href="/cases" variant="MainPage">Cases</Navlink>
       <NavlinkDropdown label="Service" variant="services" />
-      <Navlink href="/blog" variant="MainPage">Blog</Navlink>
-      <NavlinkDropdown label="Om os" variant="about" />
+      <Navlink href="/build" variant="MainPage">Blog</Navlink>
+      <NavlinkDropdown label="Om Os" variant="about" />
     </ul>
   </nav>
-  <div class="flex gap-4">
-    <Button size="base" id="openModalBtn">Kontakt os</Button>
 
-    <div class="relative inline-block group">
-      <select class="appearance-none px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-text-primary focus:rounded-small">
-        <option value="en">EN</option>
-        <option value="da" selected>DA</option>
-      </select>
+  <div id="green" class="flex flex-col items-end">
+    <div id="yellow" class="flex items-center gap-4">
+      <Button size="base" id="openModalBtnMob" hide="mobile">Kontakt os</Button>
+      <div class="relative inline-block group">
+        <select class="appearance-none px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-text-primary focus:rounded-small">
+          <option value="en">EN</option>
+          <option value="da" selected>DA</option>
+        </select>
 
-      <!-- Custom ikon -->
-      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 transition-transform duration-200 group-focus-within:rotate-180">
-        <svg class="w-4 h-4 text-border-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 transition-transform duration-200 group-focus-within:rotate-180">
+          <Icon name="chevron-down" />
+        </div>
       </div>
+      <button id="burger" class="md:hidden transition-transform rotate-180">
+        <Icon name="fan" />
+      </button>
     </div>
   </div>
 </header>
+<NavMobile />
 
 <script>
-  const openButton = document.querySelector("#openModalBtn");
+  // BURGER MENU
+  const burger = document.querySelector("#burger");
+  const navMobile = document.querySelector("#navMobile");
+
+  let isOpen = false;
+
+  burger?.addEventListener("click", () => {
+    isOpen = !isOpen;
+    navMobile?.classList.toggle("translate-x-full");
+    burger?.classList.toggle("rotate-180");
+  });
+
+  // OVERLAY SCRIPT
+  const openButtonMob = document.querySelector("#openModalBtnMob");
+  const openButtonDesk = document.querySelector("#openModalBtnDesk");
   const closeBtn = document.getElementById("closeModalBtn");
   const modal = document.getElementById("contactModal");
 
-  openButton?.addEventListener("click", () => {
+  openButtonMob?.addEventListener("click", () => {
+    modal?.classList.remove("hidden");
+    modal?.classList.add("grid");
+  });
+  openButtonDesk?.addEventListener("click", () => {
     modal?.classList.remove("hidden");
     modal?.classList.add("grid");
   });

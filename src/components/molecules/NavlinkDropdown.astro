@@ -17,7 +17,7 @@ const options = optionsMap[variant] || ["404"];
   <!-- Dropdown shown on hover -->
   <div id={`${variant}-dropdown`} class="absolute grid gap-4 p-5 mt-9 w-80 bg-background-primary/50 backdrop-blur-sm border border-border-primary rounded-small invisible transition duration-200 z-20">
     {
-      options.map((option) => {
+      options.map((option: object) => {
         return (
           <Navlink href="build" variant="sub">
             {option}
