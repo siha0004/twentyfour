@@ -9,9 +9,7 @@ import "../styles/global.css";
 import cases from "../data/cases.json";
 import services from "../data/services.json";
 import ScrollingContainer from "../components/organisms/ScrollingContainer.astro";
-import Navlink from "../components/atoms/Navlink.astro";
-import Summary from "../components/atoms/Summary.astro";
-import NavMobile from "../components/molecules/NavMobile.astro";
+import ContactOverlayDesk from "../components/organisms/ContactOverlayDesk.astro";
 
 console.log(services);
 ---
@@ -60,4 +58,5 @@ console.log(services);
     <button popovertarget="contact_popover" class="p-4 bg-button-secondary-background cursor-pointer">Popover</button>
   </section>
   <ContactOverlay />
+  <ContactOverlayDesk />
 </MainLayouts>
