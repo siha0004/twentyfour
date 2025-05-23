@@ -8,6 +8,7 @@ import Hero from "../components/organisms/Hero.astro";
 import AboutGallery from "../components/organisms/AboutGallery.astro";
 import SectionCases from "../components/organisms/SectionCases.astro";
 import SectionCases2 from "../components/organisms/SectionCases2.astro";
+import ClientLogoWrapper from "../components/organisms/ClientLogoWrapper.astro";
 ---
 
 <MainLayouts>
@@ -31,10 +32,6 @@ import SectionCases2 from "../components/organisms/SectionCases2.astro";
     </article>
     <SectionCases />
     <SectionCases2 />
-    <!-- <article class="grid gap-10">
-    <ClientLogoRow variant="primary" LogoName1="bornholm" LogoName2="koncerthuset" LogoName3="orsted" LogoName4="vestas" LogoName5="hofor" LogoName6="koncerthuset" LogoName7="orsted" LogoName8="vestas" LogoName9="hofor" />
-    <ClientLogoRow variant="secondary" LogoName1="orsted" LogoName2="vestas" LogoName3="bornholm" LogoName4="orsted" LogoName5="koncerthuset" LogoName6="vestas" LogoName7="koncerthuset" LogoName8="hofor" LogoName9="bornholm" />
-    <ClientLogoRow variant="primary" LogoName1="koncerthuset" LogoName2="orsted" LogoName3="vestas" LogoName4="hofor" LogoName5="bornholm" LogoName6="koncerthuset" LogoName7="orsted" LogoName8="vestas" LogoName9="hofor" />
-  </article> -->
   </section>
+  <section class="full-bleed overflow-hidden"><ClientLogoWrapper /></section>
 </MainLayouts>
