@@ -51,7 +51,9 @@ import NavMobile from "../molecules/NavMobile.astro";
     burger?.classList.toggle("rotate-180");
   });
 
-  // OVERLAY SCRIPT DESKTOP
+  // OVERLAY SCRIPT MOBILE
+
+  //NU !!!!!!!!!!!!!!!!!!!!
   const openModalMob = document.querySelector("#openModalBtnMob");
   const modalMob = document.getElementById("contactModalMob");
   const openFormMob = document.querySelector("#openFormBtn");
@@ -65,6 +67,8 @@ import NavMobile from "../molecules/NavMobile.astro";
   openModalMob?.addEventListener("click", () => {
     modalMob?.classList.remove("hidden");
     modalMob?.classList.add("grid");
+    form?.classList.add("hidden");
+    formIsOpen = false;
 
     // Lukker burgermenu
     burgerIsOpen = !burgerIsOpen;
@@ -100,6 +104,7 @@ import NavMobile from "../molecules/NavMobile.astro";
   openButtonDesk?.addEventListener("click", () => {
     modalDesk?.classList.remove("hidden");
     modalDesk?.classList.add("grid");
+    console.log("formIsOpen:", formIsOpen);
   });
 
   closeBtnDesk?.addEventListener("click", () => {
