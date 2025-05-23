@@ -1,9 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { variant = "primary", size = "large", color = "primaryColor" } = Astro.props;
-
-const buttonStyling = "rounded-full text-body-base";
+const { id, icon, variant = "primary", size = "large", hide = "false" } = Astro.props;
+let buttonStyling;
 
 const variantClasses = {
   primary: "text-button-primary-text bg-button-primary-background hover:bg-button-primary-background-hover active:bg-button-primary-background-pressed focus:outline-offset-4",
@@ -15,14 +14,20 @@ const sizeClasses = {
   large: "px-8 py-3",
 };
 
-const iconVariantClasses = {
-  primaryColor: "text-button-primary-text",
-  secondaryColor: "text-button-secondary-text",
-};
+if (hide === "mobile") {
+  buttonStyling = "hidden md:inline-flex items-center gap-4 rounded-full text-body-base";
+} else if (hide === "desktop") {
+  buttonStyling = "inline-flex  md:hidden items-center gap-4 rounded-full text-body-base";
+} else {
+  buttonStyling = "inline-flex items-center gap-4 rounded-full text-body-base";
+}
 ---
 
-<button class="inline-flex items-center gap-4" class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}
-  ><slot /><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+<button id={id} class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+  <slot />
+  {icon && <Icon name={icon} class="text-current" />}
+
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
     <path d="M11.293 17.293L12.707 18.707L19.414 12L12.707 5.29297L11.293 6.70697L15.586 11H6V13H15.586L11.293 17.293Z" fill="currentColor" class:list={[iconVariantClasses[color]]}></path>
-  </svg></button
->
+  </svg> -->
+</button>

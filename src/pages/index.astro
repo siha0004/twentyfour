@@ -9,18 +9,20 @@ import "../styles/global.css";
 import cases from "../data/cases.json";
 import services from "../data/services.json";
 import ScrollingContainer from "../components/organisms/ScrollingContainer.astro";
+import ContactOverlayDesk from "../components/organisms/ContactOverlayDesk.astro";
 
 console.log(services);
 ---
 
 <MainLayouts>
   <h1 class="heading-display">Sif Bygger - Digitalt bureau</h1>
+  <div class="max-w-64"></div>
   <section class="py-32 grid grid-cols-[4fr_8fr]">
     <div>
       <h2 class="heading-tagline">Tagline</h2>
       <p class="text-heading-small"></p>
     </div>
-    <ul class="grid grid-cols-2 gap-5">
+    <ul class="grid md:grid-cols-2 gap-5">
       <!-- {
         services.map((service) => {
           return <CardServices data={service} />;
@@ -33,7 +35,7 @@ console.log(services);
     </ul>
   </section>
   <section class="pb-32">
-    <ul class="grid grid-cols-4 gap-5">
+    <ul class="grid md:grid-cols-4 gap-5">
       <CardServices text="Vores mål er at gøre komplekse ideer letforståelige og skabe design, der ikke kun er æstetisk tiltalende, men også funktionelt stærke." />
       <CardServices text="Vi ved, at integration er tricky og tidskrævende. Derfor bygger vi solide integrationer, der er både pålidelige og effektive – så dine systemer spiller sammen, uanset om de er nye eller allerede i drift." />
       <CardServices text="Gennem webudvikling kan vi hjælpe dig med at bygge selve det digitale system. Vi udvikler og transformerer forretningsidéer, planer og virksomhedskoncepter til tilpassede og skræddersyede digitale løsninger." />
@@ -41,7 +43,7 @@ console.log(services);
     </ul>
   </section>
   <section class="py-32">
-    <ul class="grid grid-cols-[3fr_5fr_4fr] gap-5">
+    <ul class="grid md:grid-cols-[3fr_5fr_4fr] gap-5">
       {
         cases.map((oneCase) => {
           return <CardCases data={oneCase} variant={oneCase.thumbnail} />;
@@ -56,4 +58,5 @@ console.log(services);
     <button popovertarget="contact_popover" class="p-4 bg-button-secondary-background cursor-pointer">Popover</button>
   </section>
   <ContactOverlay />
+  <ContactOverlayDesk />
 </MainLayouts>
